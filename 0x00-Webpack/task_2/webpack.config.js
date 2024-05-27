@@ -18,14 +18,16 @@ module.exports = {
             },
             {
                 test: /\.(png|jpeg|jpg|gif|svg)$/,
-                use:{
-                    loader:"file-loader",
-                    options: 
+                use: [
+                    "file-loader",
                     {
-                        name: "[name].[hash].[ext]",
-                        outputPath: "images"
-                    }
-                }
+                      loader: "image-webpack-loader",
+                      options: {
+                        bypassOnDebug: true, // webpack@1.x
+                        disable: true, // webpack@2.x and newer
+                      },
+                    },
+                ],
             }
         ],
     },
