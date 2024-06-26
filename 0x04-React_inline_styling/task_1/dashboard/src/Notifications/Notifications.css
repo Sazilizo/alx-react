@@ -1,0 +1,18 @@
+.notification-area{
+    float:right;
+    position:relative;
+    display: inline;
+    max-width: 100%;
+}
+.Notifications{
+    border:2px dotted red;
+    padding:1rem;
+    position:relative;
+}
+li[data="default"] {
+	color: blue;
+}
+
+li[data="urgent"] {
+	color: red;
+}
